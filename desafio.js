@@ -88,7 +88,7 @@ function verificarQueExiste(){
     //REQUERIMIENTO 3
     //establecer funcion anonima
     data.some(function(e) {
-      if(e.quote.includes(document.s1.buscar.value)){
+      if(e.quote.includes(document.s1.buscar.value) || e.character.includes(document.s1.buscar.value) || e.anime.includes(document.s1.buscar.value)){
         console.log('encontrado');
         //PARTE DEL REQUERIMIENTO 4
         ne.classList.add('oculto'); // Ocultar el mensaje "no encontrado"
@@ -111,7 +111,7 @@ function agregarExistentes() {
   //REQUERIMIENTO 4
   const verificarQueExiste = function() {
     return data.some(function(e) {
-      if (e.quote.includes(document.s1.buscar.value)) {
+      if (e.quote.includes(document.s1.buscar.value) || e.character.includes(document.s1.buscar.value) || e.anime.includes(document.s1.buscar.value)) {
         ne.classList.add('oculto'); // Ocultar el mensaje "no encontrado"
         return true;
       } else {
@@ -133,7 +133,7 @@ function agregarExistentes() {
   //REQUERIMIENTO 5
   if(document.s1.buscar.value != ""){
     //establecer funcion arrow
-    let result = data.filter((e) => e.quote.includes(document.s1.buscar.value));
+    let result = data.filter((e) => e.quote.includes(document.s1.buscar.value) || e.character.includes(document.s1.buscar.value) || e.anime.includes(document.s1.buscar.value));
     console.log(result);
     //establecer funcion arrow
     result.forEach((e) =>{
